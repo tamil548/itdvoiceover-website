@@ -15,102 +15,96 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#07152d;
-color:white;
+background:#071A35;
+color:#fff;
 }
 
 header{
+background:#0A2E5C;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 position:fixed;
 top:0;
 left:0;
 width:100%;
-background:#0b2c66;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 40px;
 z-index:1000;
-box-shadow:0 3px 10px rgba(0,0,0,.5);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
-color:white;
 }
 
 .logo span{
-color:#00bfff;
+color:#38BDF8;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:25px;
-font-size:17px;
-transition:.3s;
-}
-
-nav a:hover{
-color:#00bfff;
+font-weight:bold;
 }
 
 .hero{
 height:100vh;
-background:url("https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=80") center/cover;
+background:linear-gradient(rgba(0,20,60,.7),rgba(0,20,60,.7)),
+url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
-position:relative;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,50,.65);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:700px;
 }
 
 .hero h1{
 font-size:60px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 .hero p{
 font-size:22px;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
-.search-box{
-display:flex;
-justify-content:center;
-}
-
-.search-box input{
-width:70%;
-padding:16px;
-border:none;
-font-size:18px;
-outline:none;
-}
-
-.search-box button{
-padding:16px 25px;
-background:#00bfff;
-border:none;
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#38BDF8;
 color:white;
-font-size:18px;
-cursor:pointer;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+section{
+padding:80px 8%;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#0D274D;
+padding:25px;
+border-radius:15px;
+}
+
+.card img{
+width:100%;
+border-radius:12px;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#38BDF8;
 }
 
 </style>
@@ -127,7 +121,7 @@ cursor:pointer;
 <nav>
 <a href="#">Home</a>
 <a href="#">Matches</a>
-<a href="#">Photos</a>
+<a href="#">Gallery</a>
 <a href="#">Highlights</a>
 <a href="#">Contact</a>
 </nav>
@@ -136,20 +130,324 @@ cursor:pointer;
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
 <h1>White Eagle Sports Club</h1>
 
-<p>Cricket • Match Schedule • Highlights • Gallery</p>
+<p>Official Cricket Club Website</p>
 
-<div class="search-box">
+<a href="#" class="btn">Explore Now</a>
 
-<input type="text" placeholder="Search Match Photos...">
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>White Eagle Sports Club</title>
 
-<button>🔍</button>
+<style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071A35;
+color:#fff;
+}
+
+header{
+background:#0A2E5C;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+.logo span{
+color:#38BDF8;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,20,60,.7),rgba(0,20,60,.7)),
+url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#38BDF8;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+section{
+padding:80px 8%;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#0D274D;
+padding:25px;
+border-radius:15px;
+}
+
+.card img{
+width:100%;
+border-radius:12px;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#38BDF8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🦅 White <span>Eagle</span>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Matches</a>
+<a href="#">Gallery</a>
+<a href="#">Highlights</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>White Eagle Sports Club</h1>
+
+<p>Official Cricket Club Website</p>
+
+<a href="#" class="btn">Explore Now</a>
+
+</div>
+<section>
+
+<h2>🎥 Match Highlights</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>District League Final</h3>
+<p>Watch the best batting, bowling and fielding moments.</p>
+<a href="#" class="btn">▶ Watch</a>
+</div>
+
+<div class="card">
+<h3>Best Sixes</h3>
+<p>Top sixes hit by White Eagle players this season.</p>
+<a href="#" class="btn">▶ Watch</a>
+</div>
+
+<div class="card">
+<h3>Best Wickets</h3>
+<p>Amazing bowling highlights and match-winning spells.</p>
+<a href="#" class="btn">▶ Watch</a>
 </div>
 
 </div>
 
+</section>
+
+<section>
+
+<h2>📰 Latest News</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏆 Tournament Champions</h3>
+<p>White Eagle Sports Club won the district championship.</p>
+</div>
+
+<div class="card">
+<h3>📢 New Practice Schedule</h3>
+<p>Practice every Saturday and Sunday from 6:00 AM.</p>
+</div>
+
+<div class="card">
+<h3>⭐ Player of the Month</h3>
+<p>Congratulations to our captain for outstanding performance.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📞 Contact Us</h2>
+
+<div class="card">
+
+<h3>White Eagle Sports Club</h3>
+
+<p>📍 Tamil Nadu, India</p>
+
+<p>📧 Email : your@email.com</p>
+
+<p>📱 Phone : +91 XXXXX XXXXX</p>
+
+<a href="#" class="btn">YouTube</a>
+<a href="#" class="btn">Instagram</a>
+<a href="#" class="btn">Facebook</a>
+
+</div>
+
+</section>
+<!-- ===== PART 4 : PREMIUM SECTION ===== -->
+
+<section>
+
+<h2>🏆 Team Statistics</h2>
+
+<div class="cards">
+
+<div class="card">
+<h1 style="font-size:55px;color:#38BDF8;">125</h1>
+<p>Total Matches</p>
+</div>
+
+<div class="card">
+<h1 style="font-size:55px;color:#38BDF8;">92</h1>
+<p>Wins</p>
+</div>
+
+<div class="card">
+<h1 style="font-size:55px;color:#38BDF8;">18</h1>
+<p>Trophies</p>
+</div>
+
+<div class="card">
+<h1 style="font-size:55px;color:#38BDF8;">1500+</h1>
+<p>Fans</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>👥 Team Players</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://via.placeholder.com/400x350">
+<h3>Captain</h3>
+<p>Batsman</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/400x350">
+<h3>Vice Captain</h3>
+<p>All Rounder</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/400x350">
+<h3>Wicket Keeper</h3>
+<p>Keeper</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🏆 Sponsors</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>ABC Sports</h3>
+</div>
+
+<div class="card">
+<h3>XYZ Cricket Shop</h3>
+</div>
+
+<div class="card">
+<h3>White Eagle Academy</h3>
+</div>
+
+</div>
+
+</section>
+
+<footer style="background:#021C3A;padding:40px;text-align:center;">
+
+<h2 style="
+<footer style="background:#0A2E5C;padding:35px;text-align:center;margin-top:40px;">
+
+<h3>🦅 White Eagle Sports Club</h3>
+
+<p>© 2026 All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
+</section>
 </section>
